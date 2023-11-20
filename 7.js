@@ -1,19 +1,19 @@
 // seventh task
 
-let oddNumbers = [1, 2, 3, 4, 5, 6, 7, null, true];
-let countEven = 0;
-let countOdd = 0;
+const arrNumbers = [1, 2, 3, 4, 5, 6, 7, null, true];
+let evenNumbers = 0;
+let oddNumber = 0;
+const numbers = arrNumbers.filter((element) => typeof element === "number");
+const zeroNum = arrNumbers.filter((element) => element === 0).length;
 
-for (let i = 0; i < oddNumbers.length; i++) {
-  if (typeof oddNumbers[i] === "number") {
-    if (oddNumbers[i] % 2 === 0) {
-      countEven++;
-    } else if (oddNumbers[i] % 2 === 1) {
-      countOdd++;
-    }
+for (let i = 0; i < numbers.length; i++) {
+  if (numbers[i] % 2 === 0) {
+    evenNumbers++;
   } else {
-    console.log("It is not a number");
+    oddNumber++;
   }
 }
-console.log(countEven + " " + "even numbers");
-console.log(countOdd + " " + "odd numbers");
+
+console.log(zeroNum);
+console.log(evenNumbers);
+console.log(oddNumber);
